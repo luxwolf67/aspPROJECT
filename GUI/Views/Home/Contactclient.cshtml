@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Contactclient";
+}
+
+<div>
+    <h2>Contactclient</h2>
+    <p class="saisieObligatoire"> Paragraphe 1</p>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class=" col-md-12  col-12 "> contacter nous </div>
+
+        <div class=" col-md-4  col-12 saisieObligatoire"> Nom  </div> <div class="col-md-8  col-12 "><input type="text" name="name" /></div>
+        <div class=" col-md-4  col-12 saisieObligatoire"> Prénom  </div><div class="col-md-8  col-12 "><input type="text" name="Prénom" /></div>
+        <div class=" col-md-4  col-12 "> email  </div><div class="col-md-8  col-12 "><input type="text" name="email" /></div>
+        <div class=" col-md-4  col-12 "> Numero Télephone  </div><div class="col-md-8  col-12 "><input type="number" name="NumberPhone" /></div>
+
+        <div class=" col-md-4  col-12 "> urgent  </div><div class="col-md-8  col-12 "><input type="checkbox" name="urgent" /></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <button id="afficher" class="buton" >Afficher  </button>
+        </div>
+        <div class="col">
+        <button id="cacher" class="buton" onclick="RetirerBordure()" >Cacher  </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    $(document).ready(function () {        
+        $("#afficher").on('click', function () {
+            console.log("click");
+            $('div.container').addClass("test-pt");
+            $("div.row").addClass("testRow");
+            $("div.col").addClass("testCol");
+        });
+
+       
+    });
+
+    function RetirerBordure() {
+        console.log("click2");
+        $('div.container').removeClass("test-pt");
+        $("div.row").removeClass("testRow");
+        $("div.col").removeClass("testCol");
+    }
+
+</script>

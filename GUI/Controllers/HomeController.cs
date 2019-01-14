@@ -26,5 +26,25 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+
+        public ActionResult FormulaireTest()
+        {
+
+            return View(); ;
+        }
+
+        public ActionResult Contactclient()
+        {
+
+            return View(); ;
+        }
+
+        public  ActionResult Test()
+        {
+            ViewBag.Message = "Test page.";
+
+            return View();
+        }
+
     }
 }
